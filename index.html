@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hannes Keunen - PhD Student</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .header-content {
+            text-align: left;
+        }
+        h1 {
+            color: #333;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            color: #007acc;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        .social-links a:hover {
+            color: #005a9e;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #555;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 0;
+        }
+        .publication-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        .publication-link:hover {
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .publication-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #007acc;
+            margin-bottom: 5px;
+        }
+        .publication-authors {
+            margin: 5px 0;
+            font-size: 0.9em;
+            color: #777;
+        }
+        .publication-venue {
+            font-weight: bold;
+            margin: 5px 0;
+            color: #555;
+        }
+        .publication-abstract {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+            line-height: 1.4;
+            text-align: justify;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        a {
+            color: #007acc;
+            text-decoration: none;
+        }
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .header-content {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+        <div class="header-content">
+            <h1>Hannes Keunen</h1>
+            <p>PhD Student at Hasselt University</p>
+            <div class="social-links">
+                <a href="mailto:hannes.keunen@uhasselt.be" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/HKeunen" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://orcid.org/0009-0007-9122-4825" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
+                <a href="https://www.linkedin.com/in/hannes-keunen-0b33361b3/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>PhD student at Hasselt University, working on research in learning-based video compression and streaming under the supervision of prof. dr. Jori Liesenborgs and prof. dr. Maarten Wijnants.</p>
+    </section>
+
+    <section id="publications">
+        <h2>Publications</h2>
+        <ul>
+            <!-- Add your published papers here -->
+            <li><a href="https://doi.org/10.1145/3793853.3798411" class="publication-link" target="_blank">
+                <div class="publication-title">Towards a Unified Learning-based Video Compression and Streaming Pipeline</div>
+                <p class="publication-authors"><strong>Hannes Keunen</strong></p>
+                <p class="publication-venue">MMSys Doctoral Symposium, 2026</p>
+                <p class="publication-abstract">Video streaming accounts for a significant portion of global internet traffic, necessitating video delivery systems that efficiently utilize network resources while maximizing end-user Quality of Experience (QoE). Traditional techniques for video compression as well as adaptive bitrate (ABR) streaming rely on hand-crafted heuristics, but have recently been superseded by learned alternatives. However, these components are typically studied in isolation. This Ph.D. research investigates how learned video compression and streaming algorithms can be jointly optimized to improve over-the-top end-to-end QoE. The project focuses on neural video representations (NVRs) as a lightweight alternative to conventional codecs, analyzing their limitations in streaming scenarios and developing methods to reduce encoding complexity. In parallel, the research aims to build a systematic understanding of learning-based ABR streaming approaches and their design trade-offs. The overarching goal is to build a unified learning-based video compression and streaming pipeline optimized for QoE. Initial work includes a survey of NVR-based video compression methods and an ongoing study on accelerating NVR encoding using hypernetworks.</p>
+            </a></li>
+        </ul>
+    </section>
+</body>
+</html>
