@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HyperNVR: Accelerating Neural Video Representations - Hannes Keunen</title>
+    <title>Hypernetwork Initialization for Neural Video Representation Compression - Hannes Keunen</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
@@ -45,12 +45,35 @@
         a:hover {
             text-decoration: underline;
         }
+        .figure-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .subfigure {
+            width: calc(25% - 7.5px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .subfigure img {
+            width: 100%;
+            display: block;
+        }
+        .subfigure-label {
+            margin-top: 6px;
+            font-size: 0.9em;
+            color: #333;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <div class="back-link">
+    <!-- <div class="back-link">
         <a href="index.html">&larr; Back to Main Page</a>
-    </div>
+    </div> -->
 
     <header>
         <h1>Hypernetwork Initialization for Neural Video Representation Compression</h1>
@@ -60,6 +83,49 @@
     <section id="abstract">
         <h2>Abstract</h2>
         <p>Neural video representations (NVRs) achieve competitive compression performance compared to traditional video codecs by overfitting compact neural networks to individual video sequences. However, the primary limitation of the NVR approach is that it suffers from low encoding speeds. FastNeRV, a recent hypernetwork-based approach, accelerates encoding by generating NVR parameters directly from the video frames, yet at the expense of limited compression efficiency. This work introduces a two-stage training process that combines offline hypernetwork training (cf. FastNeRV) with online overfitting (cf. traditional NVR). Additionally, we improve the compression performance of FastNeRV by applying learned quantization parameters and entropy models to jointly optimize the trade-off between bitrate and reconstruction quality. We also introduce channel-aligned weight tokens that preserve the structure of convolution filters when generating network parameters. Experimental results on the UVG dataset show that our method outperforms FastNeRV and NVR baselines in terms of rate-distortion performance, while offering a flexible trade-off between encoding speed and compression efficiency. In this way, our method helps close the competitive gap between NVR- and autoencoder-based video codecs in the domain of learned video compression.</p>
+    </section>
+
+    <section id="figures">
+        <h2>Additional and Full-resolution Figures</h2>
+        <div class="figure-grid">
+            <div class="subfigure">
+                <img src="images/plot_uvg_psnr.png" alt="Plot UVG PSNR">
+                <span class="subfigure-label">(a)</span>
+            </div>
+            <div class="subfigure">
+                <img src="images/plot_finetune_020ms.png" alt="Plot finetune 20ms">
+                <span class="subfigure-label">(b)</span>
+            </div>
+            <div class="subfigure">
+                <img src="images/plot_finetune_050ms.png" alt="Plot finetune 50ms">
+                <span class="subfigure-label">(c)</span>
+            </div>
+            <div class="subfigure">
+                <img src="images/plot_finetune_100ms.png" alt="Plot finetune 100ms">
+                <span class="subfigure-label">(d)</span>
+            </div>
+            <div class="subfigure">
+                <img src="images/plot_finetune_200ms.png" alt="Plot finetune 200ms">
+                <span class="subfigure-label">(e)</span>
+            </div>
+            <div class="subfigure">
+                <img src="images/plot_finetune_400ms.png" alt="Plot finetune 400ms">
+                <span class="subfigure-label">(f)</span>
+            </div>
+            <div class="subfigure">
+                <img src="images/plot_finetune_600ms.png" alt="Plot finetune 600ms">
+                <span class="subfigure-label">(g)</span>
+            </div>
+            <div class="subfigure">
+                <img src="images/plot_finetune_800ms.png" alt="Plot finetune 800ms">
+                <span class="subfigure-label">(h)</span>
+            </div>
+        </div>
+        <p><em>Fig. 4:</em> (a) Compression performance of our model vs. FastNeRV with predefined quantization parameters on the UVG dataset. (b-h) Comparison of token compression, weight compression, NeRV, and H.264 (I-frames only) at 20 milliseconds (50 FPS), 50 milliseconds (20 FPS), 100 milliseconds (10 FPS), 200 milliseconds (5 FPS), 400 milliseconds (2.5 FPS), 600 milliseconds (1.67 FPS), and 800 milliseconds (1.25 FPS) per frame, respectively.</p>
+        <img src="images/grid_finetune_weights.png" style="width:100%;">
+        <img src="images/grid_finetune_tokens.png" style="width:100%;">
+        <img src="images/grid_nerv.png" style="width:100%;">
+        <p><em>Fig. 6:</em> Example frames after finetuning with λ = 0.1 for (left to right) 0, 50, 100, 200, 400, 1000, and 3000 frames respectively, with weight compression (top), token compression (middle), and NeRV (bottom).</p>
     </section>
 
     <section id="status">
