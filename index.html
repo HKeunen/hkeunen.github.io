@@ -95,6 +95,10 @@
             background-color: #ffa500;
             color: white;
         }
+        .badge.preprint {
+            background-color: #007acc;
+            color: white;
+        }
         .publication-venue {
             font-weight: bold;
             margin: 5px 0;
@@ -156,7 +160,7 @@
                 <p class="publication-abstract">Neural video representations (NVRs) achieve competitive compression performance compared to traditional video codecs by overfitting compact neural networks to individual video sequences. However, the primary limitation of the NVR approach is that it suffers from low encoding speeds. FastNeRV, a recent hypernetwork-based approach, accelerates encoding by generating NVR parameters directly from the video frames, yet at the expense of limited compression efficiency. This work introduces a two-stage training process that combines offline hypernetwork training (cf. FastNeRV) with online overfitting (cf. traditional NVR). Additionally, we improve the compression performance of FastNeRV by applying learned quantization parameters and entropy models to jointly optimize the trade-off between bitrate and reconstruction quality. We also introduce channel-aligned weight tokens that preserve the structure of convolution filters when generating network parameters. Experimental results on the UVG dataset show that our method outperforms FastNeRV and NVR baselines in terms of rate-distortion performance, while offering a flexible trade-off between encoding speed and compression efficiency. In this way, our method helps close the competitive gap between NVR- and autoencoder-based video codecs in the domain of learned video compression.</p>
             </a></li> -->
             <li><a href="https://doi.org/10.36227/techrxiv.174952637.72796323/v3" class="publication-link" target="_blank">
-                <div class="publication-title">A Survey of Implicit Neural Representations for Video Compression <span class="badge under-review">Under Review</span></div>
+                <div class="publication-title">A Survey of Implicit Neural Representations for Video Compression <span class="badge preprint">Preprint</span><span class="badge under-review">Under Review</span></div>
                 <p class="publication-authors"><strong>Hannes Keunen</strong>, Maarten Wijnants and Jori Liesenborgs</p>
                 <!-- <p class="publication-venue">Multimedia Tools and Applications</p> -->
                 <p class="publication-abstract">Neural Video Representations (NVRs) have recently been proposed as a novel approach to the video compression problem. NVRs consist of one or multiple small neural networks that are overfitted on one specific video sequence, thereby encoding the video within the weights and biases of the network(s). In contrast to other learned video coding approaches, NVR-based codecs do not rely on large datasets and have a relatively low decoding complexity. Many works have focused on improving the compression performance of NVR-based codecs by enhancing the overall codec design, devising more performant and parameter-efficient model architectures, and incorporating more advanced model compression schemes such as weight pruning, quantization, and entropy minimization. We provide a systematic overview of representative work in the field and discuss common weaknesses and opportunities for future work, with a focus on practical deployment for video streaming. This paper serves as both an introduction for newcomers and a reference for existing researchers, highlighting the potential of neural video representations as an alternative to traditional codecs in video compression.</p>
