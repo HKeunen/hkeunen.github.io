@@ -6,12 +6,6 @@ This is my personal website hosted on GitHub Pages. It showcases my work as a Ph
 
 I am a PhD student researching AI & Video Streaming under the supervision of prof. dr. Jori Liesenborgs and prof. dr. Maarten Wijnants.
 
-## Contact
-
-- Email: [your.email@example.com](mailto:your.email@example.com)
-- ORCID: [https://orcid.org/your-orcid-id](https://orcid.org/your-orcid-id)
-- LinkedIn: [https://linkedin.com/in/your-linkedin-profile](https://linkedin.com/in/your-linkedin-profile)
-
 ## Publications and Projects
 
 This site includes links to my published papers, GitHub repositories, and other relevant work.
