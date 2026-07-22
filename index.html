@@ -99,6 +99,10 @@
             background-color: #007acc;
             color: white;
         }
+        .badge.accepted {
+            background-color: #28a745;
+            color: white;
+        }
         .publication-venue {
             font-weight: bold;
             margin: 5px 0;
@@ -153,22 +157,22 @@
     <section id="publications">
         <h2>Publications</h2>
         <ul>
-            <!-- <li><a href="hyper-nvr.html" class="publication-link">
-                <div class="publication-title">Hypernetwork Initialization for Neural Video Representation Compression <span class="badge under-review">Under Review</span></div>
+            <li><a href="hyper-nvr.html" class="publication-link">
+                <div class="publication-title">Hypernetwork Initialization for Neural Video Representation Compression <span class="badge accepted">Accepted</span></div>
                 <p class="publication-authors"><strong>Hannes Keunen</strong>, Maarten Wijnants and Jori Liesenborgs</p>
-                <p class="publication-venue">MMSP, 2026</p>
+                <p class="publication-venue">IEEE MMSP, 2026</p>
                 <p class="publication-abstract">Neural video representations (NVRs) achieve competitive compression performance compared to traditional video codecs by overfitting compact neural networks to individual video sequences. However, the primary limitation of the NVR approach is that it suffers from low encoding speeds. FastNeRV, a recent hypernetwork-based approach, accelerates encoding by generating NVR parameters directly from the video frames, yet at the expense of limited compression efficiency. This work introduces a two-stage training process that combines offline hypernetwork training (cf. FastNeRV) with online overfitting (cf. traditional NVR). Additionally, we improve the compression performance of FastNeRV by applying learned quantization parameters and entropy models to jointly optimize the trade-off between bitrate and reconstruction quality. We also introduce channel-aligned weight tokens that preserve the structure of convolution filters when generating network parameters. Experimental results on the UVG dataset show that our method outperforms FastNeRV and NVR baselines in terms of rate-distortion performance, while offering a flexible trade-off between encoding speed and compression efficiency. In this way, our method helps close the competitive gap between NVR- and autoencoder-based video codecs in the domain of learned video compression.</p>
-            </a></li> -->
+            </a></li>
             <li><a href="https://doi.org/10.36227/techrxiv.174952637.72796323/v3" class="publication-link" target="_blank">
-                <div class="publication-title">A Survey of Implicit Neural Representations for Video Compression <span class="badge preprint">Preprint</span><span class="badge under-review">Under Review</span></div>
+                <div class="publication-title">A Survey of Implicit Neural Representations for Video Compression <span class="badge preprint">Preprint</span><span class="badge accepted">Accepted</span></div>
                 <p class="publication-authors"><strong>Hannes Keunen</strong>, Maarten Wijnants and Jori Liesenborgs</p>
-                <!-- <p class="publication-venue">Multimedia Tools and Applications</p> -->
+                <p class="publication-venue">Multimedia Tools and Applications</p>
                 <p class="publication-abstract">Neural Video Representations (NVRs) have recently been proposed as a novel approach to the video compression problem. NVRs consist of one or multiple small neural networks that are overfitted on one specific video sequence, thereby encoding the video within the weights and biases of the network(s). In contrast to other learned video coding approaches, NVR-based codecs do not rely on large datasets and have a relatively low decoding complexity. Many works have focused on improving the compression performance of NVR-based codecs by enhancing the overall codec design, devising more performant and parameter-efficient model architectures, and incorporating more advanced model compression schemes such as weight pruning, quantization, and entropy minimization. We provide a systematic overview of representative work in the field and discuss common weaknesses and opportunities for future work, with a focus on practical deployment for video streaming. This paper serves as both an introduction for newcomers and a reference for existing researchers, highlighting the potential of neural video representations as an alternative to traditional codecs in video compression.</p>
             </a></li>
             <li><a href="https://doi.org/10.1145/3793853.3798411" class="publication-link" target="_blank">
                 <div class="publication-title">Towards a Unified Learning-based Video Compression and Streaming Pipeline</div>
                 <p class="publication-authors"><strong>Hannes Keunen</strong></p>
-                <p class="publication-venue">MMSys Doctoral Symposium, 2026</p>
+                <p class="publication-venue">ACM MMSys Doctoral Symposium, 2026</p>
                 <p class="publication-abstract">Video streaming accounts for a significant portion of global internet traffic, necessitating video delivery systems that efficiently utilize network resources while maximizing end-user Quality of Experience (QoE). Traditional techniques for video compression as well as adaptive bitrate (ABR) streaming rely on hand-crafted heuristics, but have recently been superseded by learned alternatives. However, these components are typically studied in isolation. This Ph.D. research investigates how learned video compression and streaming algorithms can be jointly optimized to improve over-the-top end-to-end QoE. The project focuses on neural video representations (NVRs) as a lightweight alternative to conventional codecs, analyzing their limitations in streaming scenarios and developing methods to reduce encoding complexity. In parallel, the research aims to build a systematic understanding of learning-based ABR streaming approaches and their design trade-offs. The overarching goal is to build a unified learning-based video compression and streaming pipeline optimized for QoE. Initial work includes a survey of NVR-based video compression methods and an ongoing study on accelerating NVR encoding using hypernetworks.</p>
             </a></li>
         </ul>
